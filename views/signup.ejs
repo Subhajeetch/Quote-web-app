@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="/styles/login_and_signup.css">
+</head>
+
+<body>
+  <main>
+    <div class="Main_title_container">
+      <h1>Create your account!</h1>
+    </div>
+    
+    <form action="/signup" method="POST">
+    
+    <div class="inputs_container">
+      <div class="single_input_container">
+        <p class="input_title">First name</p>
+        <input type="text" required placeholder="Jhon" name="firstName">
+        <p class="small-text">Name will be shared with everyone!</p>
+    </div>
+    
+    <div class="inputs_container">
+      <div class="single_input_container">
+        <p class="input_title">Last name</p>
+        <input type="text" placeholder="Titor" name="lastName">
+    </div>
+
+    <div class="inputs_container">
+      <div class="single_input_container">
+        <p class="input_title">Email</p>
+        <input type="text" required placeholder="name@example.com" name="email">
+      </div>
+
+      <div class="single_input_container">
+        <p class="input_title">Password</p>
+        <input type="password" required placeholder="Enter your password..." name="password">
+      </div>
+    </div>
+
+    <div class="btn_and_links_container">
+      <button type="submit" class="login_btn">Create Account</button>
+      <p class="terms_link">Already a user? <a href="/login">login</a>.</p>
+    </div>
+
+    </form>
+
+  </main>
+</body>
+
+    </html>

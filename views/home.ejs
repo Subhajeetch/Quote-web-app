@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home - Add quotes</title>
+  <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+  <main>
+    
+    <div class="profile_div">
+      <h1>Welcome <%= name %></h1>
+      <p class="heading_discription">Share your quote!</p>
+    </div>
+    
+    <div class="feed_button_container">
+      <button onclick="
+        window.location.href = '/feed';
+      " class="feed_button"><p>Feed</p><p class="small-text">Quotes from world</p></button>
+      
+      <form action="/logout" method="POST" class="logout_button_form">
+        <button type="submit" class="logout_button"><p>Logout</p><p class="small-text">Logs out from this device</p></button>
+      </form>
+      
+    </div>
+    
+    <form action="/post/quote" method="POST" class="quote_form">
+      <input type="text" placeholder="Write your quote..." class="quote_input" name="quote">
+      <button class="submit_button" type="submit">Add</button>
+    </form>
+    
+    <h2>Your quotes:</h2>
+    
+    <div class="all_quotes_container">
+      
+      <% if (quotes.length > 0) { %>
+           <% quotes.forEach((quote) => { %>
+              <div class="quote_container">
+                <div class="quote_details_container">
+                
+                    <p class="quote"> <%= quote.quote %> </p>
+                    
+                    <div class="quote_details">
+                      <p class="quote_time"><%= quote.addedDate %></p>
+                      <p class="quote_id">ID: <%= quote.quoteId %></p>
+                    </div>
+                </div>
+                
+                <div class="delete_button_container">
+                  <form action="/delete-quote" method="POST">
+                    <input type="hidden" name="quoteId" value="<%= quote.uniqueQuoteId %>">
+                    <button type="submit" class="delete_button"><img src="/images/delete.png" alt="delete.png" class="delete_img"></button>
+                  </form>
+                 </div>
+                
+                
+                
+              </div>
+            <% }) %>
+          <% } else { %>
+              <p class="quote">No quotes added!</p>
+        <% } %>  
+      
+    </div>
+    
+  </main>
+</body>
+
+</html>

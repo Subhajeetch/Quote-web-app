@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+}
+
+
+
+body {
+  height: 100vh;
+  background-color: #FFFFFF;
+  margin: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.profile_div {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #1FA1FF;
+  font-size: 20px;
+}
+
+.heading_discription {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.feed_button_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.feed_button {
+  border: none;
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 800;
+  background-color: #80C5FF;
+  cursor: pointer;
+}
+
+.small-text {
+  font-size: 8px;
+  transform: scale(.75);
+  font-weight: 400;
+}
+
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.disc {
+  font-size: 11px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.all_quotes_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  
+  gap: 10px;
+}
+
+.quote-div {
+  background-color: #EFEFEF;
+  display: flex;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.profile_pic_container {
+  display: flex;
+  padding: 4px;
+}
+
+.quote_image {
+  height: 38px;
+  border-radius: 50%;
+}
+
+.quote_container {
+  padding: 5px 10px 4px 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user_name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.quote {
+  flex: 1;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.1;
+  padding-left: 8px;
+  margin-bottom: 6px;
+}
+
+.quote_details {
+  display: flex;
+  gap: 10px;
+}
+
+.quote_time, .quote_id {
+  color: #555555;
+  font-size: 8px;
+  transform: scale(.75);
+}
+
+
+.feed_button:hover {
+  background-color: #53B0FF;
+}

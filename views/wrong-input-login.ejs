@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Log In</title>
+  <link rel="stylesheet" href="/styles/login_and_signup.css">
+</head>
+
+<body>
+  <main>
+    <div class="Main_title_container">
+      <h1>Let's get you in!</h1>
+    </div>
+
+    <form action="/user/login" method="POST">
+  
+    <div class="inputs_container">
+      <div class="single_input_container">
+        <p class="input_title">Email</p>
+        <input type="text" name="email" placeholder="name@example.com" class="email-input">
+      </div>
+
+      <div class="single_input_container">
+        <p class="input_title">Password</p>
+        <input type="password" name="password" placeholder="Enter your password..." class="pass-input">
+      </div>
+    </div>
+    
+    <div class="warning">
+      <img src="/images/warning.png" alt="warning" class="warning_img">
+      <p class="warning_text">Email or password is wrong.</p>
+    </div>
+
+    <div class="btn_and_links_container">
+      <button type="submit" class="login_btn">Log In</button>
+      <p class="terms_link">By logging in, you accept our <a href="#">privacy policies</a> and <a href="#">terms & conditions</a>.</p>
+    </div>
+    
+    </form>
+
+  </main>
+  
+  <script src="/scripts/login.js"></script>
+</body>
+
+</html>

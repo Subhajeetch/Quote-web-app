@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quote Feed</title>
+  <link rel="stylesheet" href="/styles/feed.css">
+</head>
+
+<body>
+  <main>
+    
+    <div class="profile_div">
+      <h1>Welcome <%= name %>!</h1>
+      <p class="heading_discription">Explore quotes!</p>
+    </div>
+    
+    <div class="feed_button_container">
+      <button onclick="
+        window.location.href = '/home';
+      " class="feed_button"><p>Add Quote</p><p class="small-text">Add your quotes & share it</p></button>
+    </div>
+    
+    
+    <h2>Feed</h2>
+    <p class="disc">The quotes that shared by everyone</p>
+    
+    <div class="all_quotes_container">
+      
+      <% if (quotes.length > 0) { %>
+            <% quotes.forEach((quote) => { %>
+      
+      
+      <div class="quote-div">
+        
+        <div class="profile_pic_container">
+          <img src="/images/quote.jpg" alt="Quote.jpg" class="quote_image">
+        </div>
+        
+        <div class="quote_container">
+          <p class="user_name"><%= quote.name %></p>
+        
+        <p class="quote"><%= quote.quote %></p>
+        
+        <div class="quote_details">
+          <p class="quote_time"><%= quote.addedDate %></p>
+          <p class="quote_id">ID: <%= quote.quoteId %></p>
+        </div>
+        
+      </div>
+        
+      </div>
+      
+      <% }) %>
+      <% } else { %>
+          <p>No one shared their quotes!</p>
+        <% } %>
+      
+    </div>
+    
+  </main>
+</body>
+
+</html>
